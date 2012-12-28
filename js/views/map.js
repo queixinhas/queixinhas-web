@@ -21,6 +21,7 @@ function($, _, Backbone, gmaps) {
     },
 
     render: function() {
+      // render the map and keep a reference to it
       this.gmapObj = this.renderGoogleMaps(this.el);
 
       return this;
