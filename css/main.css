@@ -1,0 +1,122 @@
+html {
+  height: 100%
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+.header {
+  display: table;
+  width: 99%;
+  margin: 5px 10px 5px 10px;
+}
+
+/* logo-link */
+
+.header .logo-link {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.3s, background 1s, background 1s;
+  -webkit-transition: all 0.3s, background 1s, background 1s;
+  transition: all 0.3s, background 1s, background 1s;
+  padding: 0px;
+}
+
+.header .logo-link .logo {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.header .logo-link .name {
+  padding-left: 5px;
+  vertical-align:middle;
+}
+
+/* punchline */
+
+.header .punchline {
+  display: table-cell;
+  vertical-align:middle;
+}
+
+.header .punchline p {
+  line-height: 0px;
+  margin-bottom: 0.4em;
+}
+
+.header .punchline small {
+  font-size: 10px;
+}
+
+/* search */
+
+.header .search {
+  display: table-cell;
+  vertical-align:middle;
+}
+
+/* sign-in-up */
+
+.header .userOptions {
+  display: table-cell;
+  vertical-align: middle;
+  list-style: none;
+  width: auto;
+}
+
+.header .userOptions li {
+  width: auto;
+}
+
+.header .userOptions .btn {
+  font: 1em/1.4 Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.3s, background 1s, background 1s;
+  -webkit-transition: all 0.3s, background 1s, background 1s;
+  transition: all 0.3s, background 1s, background 1s;
+}
+
+/* CONTAINER */
+
+.container {
+  height: 100%;
+  display: block;
+}
+
+/* FOOTER */
+
+.footer {
+
+}
+
+.footer .links {
+  list-style: disc;
+  float: right;
+  margin-right: 10px;
+
+}
+
+.footer ul li {
+  list-style: none;
+  float: left;
+  margin: 0px 5px 0px 5px;
+}
+

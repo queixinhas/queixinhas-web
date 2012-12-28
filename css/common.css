@@ -1,0 +1,127 @@
+/* Common CSS classes to use */
+/* source:; http://tympanus.net/codrops/2012/10/25/kick-start-your-project-a-collection-of-handy-css-snippets/ */
+
+.float-left { float: left; }
+.float-right { float: right; }
+.hide { display: none; }
+.show { display: block; }
+.content { font: 1em/1.4 Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.title { font: 1.7em/1.2 Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif; }
+.code { font: 0.8em/1.6 Monaco, Mono-Space, monospace; }
+.disabled { pointer-events: none; opacity: 0.5; }
+
+a {
+  text-decoration: none;
+  color: #08C;
+  transition: all 0.3s ease-out;
+  position: relative;
+  padding: .5em;
+  margin: -.5em;
+}
+a:hover {
+  color: #0AF;
+}
+
+
+/* change default box-model to include padding and borders */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* clearfix to prevent floated elements of collapsing on themselves */
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* space content is one way to avoid an Opera bug */
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix { /* IE6/7 support */
+  *zoom: 1;
+}
+
+/* better hiding content */
+.visuallyhidden {
+  position: absolute;
+  width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+  height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* image replacement */
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* preventing text of breaking out of their container e.g. URL */
+.break { /* doesn't work on opera */
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/* make an ellipsis in case the string is too long for its container */
+.ellipsis {
+  width: 250px; /* this is configurable to the taste */
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis; /* Required for IE8 */
+  -o-text-overflow: ellipsis; /* Required for Opera */
+  text-overflow: ellipsis;
+}
+
+/* make long strings break in <pre> tags */
+pre {
+  white-space: pre-wrap;       /* Chrome & Safari */
+  white-space: -moz-pre-wrap;  /* Mozilla since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
+/* DEBUG STUFF */
+/*  add the .debug class to the "html" element to see borders */
+
+/* Empty Elements */
+.debug div:empty, .debug span:empty,.debug li:empty,.debug p:empty,.debug td:empty,.debug th:empty {
+  padding: 20px;
+  border: 5px dotted yellow !important;
+}
+
+/* Empty Attributes */
+.debug *[alt=""], .debug *[title=""], .debug *[class=""], .debug *[id=""], .debug a[href=""] {
+  border: 5px solid yellow !important;
+}
+
+/* Deprecated Elements */
+.debug applet, .debug basefont, .debug center, .debug dir, .debug font, .debug isindex, .debug menu, .debug s, .debug strike, .debug u {
+  border: 5px dotted red !important;
+}
+
+/* Deprecated Attributes */
+.debug *[background], .debug *[bgcolor], .debug *[clear], .debug *[color], .debug *[compact], .debug *[noshade], .debug *[nowrap], .debug *[size], .debug *[start],.debug *[bottommargin], .debug *[leftmargin], .debug *[rightmargin], .debug *[topmargin], .debug *[marginheight], .debug *[marginwidth], .debug *[alink], .debug *[link], .debug *[text], .debug *[vlink],.debug *[align], .debug *[valign],.debug *[hspace], .debug *[vspace],.debug *[height], .debug *[width],.debug ul[type], .debug ol[type], .debug li[type] {
+  border: 5px solid red !important;
+}
+
+/* Proposed Deprecated Elements */
+.debug input[type="button"], .debug big, .debug tt {
+  border: 5px dotted #33FF00 !important;
+}
+
+/* Proposed Deprecated Attributes */
+.debug *[border], .debug table[cellpadding], .debug table[cellspacing] {
+  border: 5px solid #33FF00 !important;
+}
