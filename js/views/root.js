@@ -7,9 +7,8 @@ define([
   'backbone',
   'mustache',
   'gmaps',
-  // 'text!templates/.html',
 ],
-function($, _, Backbone, Mustache, gmaps) {//, template) {
+function($, _, Backbone, Mustache, gmaps) {
   return Backbone.View.extend({
     initialize: function(options) {
       // TODO:
@@ -25,14 +24,14 @@ function($, _, Backbone, Mustache, gmaps) {//, template) {
     },
 
     render: function() {
-      var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
-      var marker = new google.maps.Marker();
+      // TEST: adding a marker on the main map (australia)
       var marker = new google.maps.Marker({
-        position: myLatlng,
+        position: new google.maps.LatLng(-25.363882, 131.044922),
         map: gmaps.map,
         title: 'Hello World!'
       });
 
+      $('.sidepanel').toggleClass('show').toggleClass('hide');
       // var t = Mustache.render(template, this.context());
       // this.$el.html(t);
 

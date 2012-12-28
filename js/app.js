@@ -4,9 +4,10 @@ define([
   'backbone',
   'mustache',
   'views/index',
+  'views/sidepanel',
   'routers/router',
 ],
-function($, _, Backbone, Mustache, IndexView, Router) {
+function($, _, Backbone, Mustache, IndexView, SidepanelView, Router) {
   var initialize = function() {
     // setup our initial application view
     initializeAppView();
@@ -16,8 +17,13 @@ function($, _, Backbone, Mustache, IndexView, Router) {
   }
 
   var initializeAppView = function() {
-    var v = new IndexView().render();
-    $('.container').html(v.$el);
+    // renders the index view and correctly positions it in the DOM
+    var index = new IndexView().render();
+    $('.container').html(index.$el);
+
+    // renders the sidepanel view and correctly positions it in the DOM
+    var sidepanel = new SidepanelView().render();
+    $('.header').after(sidepanel.$el);
   };
 
   return {

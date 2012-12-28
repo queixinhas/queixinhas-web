@@ -22,7 +22,6 @@ a:hover {
   color: #0AF;
 }
 
-
 /* change default box-model to include padding and borders */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;

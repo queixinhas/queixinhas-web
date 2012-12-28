@@ -1,19 +1,19 @@
 /*
-  sets up the initial view for our application
+  handles all interaction with the sidepanel
 */
 define([
   'jquery',
   'underscore',
   'backbone',
-  'views/map',
+  'mustache',
+  'text!templates/sidepanel.html',
 ],
-function($, _, Backbone, MapView) {
+function($, _, Backbone, Mustache, template) {
   return Backbone.View.extend({
     tagName: 'div',
-    className: 'indexContainer',
+    className: 'sidepanel hide',
 
     initialize: function(options) {
-      this.map = new MapView();
     },
 
     context: function() {
@@ -22,7 +22,7 @@ function($, _, Backbone, MapView) {
     },
 
     render: function() {
-      this.$el.html(this.map.render().el);
+      this.$el.html(Mustache.render(template, this.context()));
 
       return this;
     },
