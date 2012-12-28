@@ -19,6 +19,7 @@ body {
 /* logo-link */
 
 .header .logo-link {
+  width: 300px;
   display: table-cell;
   vertical-align: middle;
   font-size: 25px;
@@ -58,13 +59,6 @@ body {
 
 .header .punchline small {
   font-size: 10px;
-}
-
-/* search */
-
-.header .search {
-  display: table-cell;
-  vertical-align:middle;
 }
 
 /* sign-in-up */

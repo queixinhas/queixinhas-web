@@ -1,3 +1,10 @@
+/*
+  view for single report information
+
+  TODO:
+  receives model in options
+  renders its view with the values
+*/
 define([
   'jquery',
   'underscore',

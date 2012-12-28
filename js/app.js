@@ -3,11 +3,11 @@ define([
   'underscore',
   'backbone',
   'mustache',
+  'routers/router',
   'views/map',
   'views/sidepanel',
-  'routers/router',
 ],
-function($, _, Backbone, Mustache, MapView, SidepanelView, Router) {
+function($, _, Backbone, Mustache, Router, MapView, SidepanelView) {
   var initialize = function() {
     // setup our initial application view
     initializeAppView();
@@ -18,7 +18,7 @@ function($, _, Backbone, Mustache, MapView, SidepanelView, Router) {
 
   var initializeAppView = function() {
     // renders the map view and correctly positions it in the DOM
-    var map = new MapView().render();
+    var map = MapView.initialize()
     $('.container').html(map.$el);
 
     // renders the sidepanel view and correctly positions it in the DOM

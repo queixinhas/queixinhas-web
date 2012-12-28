@@ -1,33 +1,26 @@
 /*
   handles all interaction with the map
+  ATTN: this is a "singleton"
+  ATTN: this is not a backbone view
 */
 define([
   'jquery',
-  'underscore',
-  'backbone',
+  'mustache',
   'gmaps',
 ],
-function($, _, Backbone, gmaps) {
-  return Backbone.View.extend({
-    tagName: 'div',
-    id: 'mapCanvas',
+function($, Mustache, gmaps) {
+  var MapView = (function() {
+    function MapView() {}
 
-    initialize: function(options) {
-    },
-
-    context: function() {
-      return {
-      };
-    },
-
-    render: function() {
-      // render the map and keep a reference to it
+    MapView.prototype.initialize = function() {
+      this.$el = $('<div id="mapCanvas"></div>')
+      this.el = this.$el.get(0);
       this.gmapObj = this.renderGoogleMaps(this.el);
 
       return this;
-    },
+    }
 
-    renderGoogleMaps: function(mapContainer) {
+    MapView.prototype.renderGoogleMaps = function(mapContainer) {
       var mapOptions = {
         zoom: 10,
         center: new google.maps.LatLng(38.7511, -9.133),
@@ -36,6 +29,10 @@ function($, _, Backbone, gmaps) {
       };
 
       return new google.maps.Map(mapContainer, mapOptions);
-    },
-  });
+    };
+
+    return MapView;
+  })();
+
+  return new MapView;
 });
