@@ -1,0 +1,101 @@
+/* REPORT */
+.report {
+  margin: 10px;
+  overflow: auto;
+  height: inherit;
+
+  font: 1em/1.4 Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.report p {
+  margin-bottom: 0px;
+}
+
+/* REPORT FULL */
+.reportFull .head {
+  display: block;
+}
+
+.reportFull .back {
+  float: left;
+  margin-right: 10px;
+}
+
+.reportFull .share {
+  float: left;
+  margin-right: 10px;
+}
+
+.reportFull .title {
+
+}
+
+.reportFull .date {
+  font-size: 10px;
+}
+
+.reportFull .address {
+  font-size: 10px;
+}
+
+.reportFull .photos {
+  margin-top: 15px;
+  padding-left: 20px;
+  display: block;
+  list-style: none;
+}
+
+.reportFull .photo {
+  float: left;
+  width: 85px;
+  height: 85px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.reportFull .photo .photoUrl {
+
+}
+
+.reportFull .photo .photoUrl .thumbnail {
+
+}
+
+.reportFull .photo .photoUrl .thumbnail:hover {
+  outline: 1px solid black;
+}
+
+.reportFull .description {
+
+}
+
+/* REPORT SMALL */
+.reportSmall {
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.reportSmall .thumbnail {
+  float: left;
+  margin-right: 10px;
+}
+
+.reportSmall .title {
+  float: left;
+}
+
+.reportSmall .title .reportLink {
+
+}
+
+.reportSmall .address {
+  float: left;
+}
+
+.reportSmall .date {
+  float: left;
+}
+

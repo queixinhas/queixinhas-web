@@ -12,11 +12,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/sidepanel.css">
+    <link rel="stylesheet" href="css/report.css">
 
     <script data-main="js/main" src="js/libs/require/require.js"></script>
   </head>
 
   <body>
+    <!-- NOTIFICATION BAR -->
+    <div class="notification-bar hide">
+      <a class="close" href="#">&times;</a>
+    </div>
+
     <!-- HEADER -->
     <div class="header">
       <a class="logo-link" href="">
@@ -28,6 +34,11 @@
         <p>E o povo pá?!</p>
         <small>- Homens da Luta</small>
       </blockquote>
+
+      <div class="social">
+        <div class="fb-like" data-href="http://www.queixinhas.com" data-send="false" data-width="450" data-show-faces="false" data-font="tahoma">
+        </div>
+      </div>
 
       <ul class="userOptions">
         <li>
@@ -52,5 +63,17 @@
         <li>Queixinhas © 2012</li>
       </ul>
     </div>
+
+    <!-- FACEBOOK LIKE -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=181532581931619";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
   </body>
 </html>

@@ -22,7 +22,7 @@ function($, _, Backbone, Mustache, Router, MapView, SidepanelView) {
     $('.container').html(map.$el);
 
     // renders the sidepanel view and correctly positions it in the DOM
-    var sidepanel = new SidepanelView().render();
+    var sidepanel = SidepanelView.initialize().render();
     $('.header').after(sidepanel.$el);
   };
 

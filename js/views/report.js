@@ -1,36 +1,48 @@
 /*
   view for single report information
-
-  TODO:
-  receives model in options
-  renders its view with the values
 */
 define([
   'jquery',
   'underscore',
   'backbone',
   'mustache',
+  'views/map',
+  'views/sidepanel',
   'models/report',
-  'text!templates/report.html'
+  'text!templates/report_small.html',
+  'text!templates/report_full.html',
 ],
-function($, _, Backbone, Mustache, ReportModel, template) {
+function($, _, Backbone, Mustache, MapView, Sidepanel, ReportModel, templateSmall, templateFull) {
   return Backbone.View.extend({
+    tagName: 'div',
+    className: 'report',
+
     initialize: function(options) {
       this.model = options.model;
+      this.type = options.type;
     },
 
     context: function() {
       return {
         title: this.model.get('title'),
-        description: this.model.get('description'),
+        date: this.model.get('date'),
         address: this.model.get('address'),
+        description: this.model.get('description'),
       };
     },
 
     render: function() {
-      var c = this.context();
-      var t = Mustache.render(template, c);
-      this.$el.html(t);
+      var template;
+      if(this.type == 'full') {
+        this.$el.addClass('reportFull');
+        template = templateFull;
+      }
+      else {
+        this.$el.addClass('reportSmall');
+        template = templateSmall;
+      }
+
+      this.$el.html(Mustache.render(template, this.context()));
 
       return this;
     },

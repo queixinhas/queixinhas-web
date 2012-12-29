@@ -10,11 +10,13 @@ define([
 ],
 function($, Mustache, gmaps) {
   var MapView = (function() {
-    function MapView() {}
+    function MapView() {
+    }
 
     MapView.prototype.initialize = function() {
       this.$el = $('<div id="mapCanvas"></div>')
       this.el = this.$el.get(0);
+      // keep a reference to the gmaps object
       this.gmapObj = this.renderGoogleMaps(this.el);
 
       return this;
