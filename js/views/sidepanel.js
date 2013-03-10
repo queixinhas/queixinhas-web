@@ -41,7 +41,9 @@ function($, _, Backbone, Mustache, template) {
       container.addClass('show');
       container.removeClass('hide');
 
-      $('.reportsContainer').toggleClass('hide').toggleClass('show');
+      var c = $('.reportsContainer');
+      c.removeClass('show');
+      c.addClass('hide');
     }
 
     Sidepanel.prototype.setReportList = function(element) {
@@ -50,7 +52,9 @@ function($, _, Backbone, Mustache, template) {
       container.addClass('show');
       container.removeClass('hide');
 
-      $('.reportContainer').toggleClass('hide').toggleClass('show');
+      var c = $('.reportContainer');
+      c.removeClass('show');
+      c.addClass('hide');
     }
 
     return Sidepanel;

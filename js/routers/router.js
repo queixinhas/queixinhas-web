@@ -56,7 +56,8 @@ function($, _, Backbone, ReportModel, ReportCollection, Sidepanel, MapView, Repo
       var r7 = new ReportView({model:new ReportModel({id:0}), type:'small'}).render();
       var r8 = new ReportView({model:new ReportModel({id:0}), type:'small'}).render();
       var r9 = new ReportView({model:new ReportModel({id:0}), type:'small'}).render();
-      var x = $('<div style="overflow-y: auto;"></div>');
+      var r10 = new ReportView({model:new ReportModel({id:0}), type:'small'}).render();
+      var x = $('<div></div>');
       x.append(r1.$el);
       x.append(r2.$el);
       x.append(r3.$el);
@@ -66,6 +67,7 @@ function($, _, Backbone, ReportModel, ReportCollection, Sidepanel, MapView, Repo
       x.append(r7.$el);
       x.append(r8.$el);
       x.append(r9.$el);
+      x.append(r10.$el);
       Sidepanel.setReportList(x);
     });
 

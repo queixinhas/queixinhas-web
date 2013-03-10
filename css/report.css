@@ -1,7 +1,6 @@
 /* REPORT */
 .report {
   margin: 10px;
-  overflow: auto;
   height: inherit;
 
   font: 1em/1.4 Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -14,17 +13,21 @@
 }
 
 /* REPORT FULL */
+.reportFull {
+
+}
+
 .reportFull .head {
   display: block;
 }
 
 .reportFull .back {
-  float: left;
+  /*float: left;*/
   margin-right: 10px;
 }
 
 .reportFull .share {
-  float: left;
+  /*float: left;*/
   margin-right: 10px;
 }
 
@@ -76,6 +79,7 @@
   display: block;
   padding-bottom: 5px;
   border-bottom: 1px solid black;
+  overflow: auto;
 }
 
 .reportSmall .thumbnail {
