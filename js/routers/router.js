@@ -12,6 +12,7 @@ function($, _, Backbone, ReportModel, ReportCollection, Sidepanel, MapView, Repo
   var AppRouter = Backbone.Router.extend({
     routes: {
       '':                   'rootHandler',
+      'test':               'testHandler',
 
       'sign_up':            'signUpHandler',
       'sign_in':            'signInHandler',
@@ -28,6 +29,20 @@ function($, _, Backbone, ReportModel, ReportCollection, Sidepanel, MapView, Repo
 
   var initialize = function() {
     var router = new AppRouter;
+
+    router.on('route:testHandler', function() {
+      console.log('testHandler');
+      var successHandler = function(data) {
+        for(r in data) {
+          r = data[r];
+          r = new ReportView({model:new ReportModel(r), type:'small'}).render();
+          var x = $('<div></div>');
+          x.append(r.$el);
+          Sidepanel.setReportList(x);
+        }
+      };
+      $.get('http://localhost:3000/reports', successHandler, 'json');
+    });
 
     // default router
     router.on('route:rootHandler', function() {

@@ -22,6 +22,18 @@ function(_, Backbone) {
     // },
 
     initialize: function(options) {
+      if(options)
+        this.set({
+          title: options.name,
+          description: options.description,
+          date: options.date,
+          address: options.address,
+          // latitude = options.location.lat,
+          // longitude = options.location.lon,
+          tags: options.tags,
+          // media: options.mediaItems
+        });
+
       return this;
     }
   });
